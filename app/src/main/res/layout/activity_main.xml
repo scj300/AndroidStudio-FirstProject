@@ -8,7 +8,329 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_init"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <!-- Cover Image -->
+            <ImageView
+                android:id="@+id/fast_food_image"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/fast_food">
+            </ImageView>
+
+            <!-- Start of Scroll View -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="465dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:orientation="vertical">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="@string/name_hint">
+                    </EditText>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:hint="@string/phone_number_hint">
+                    </EditText>
+
+                    <!-- Delivery Home -->
+                    <LinearLayout
+                        android:id="@+id/layout_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="@string/home_delivery_textView">
+                        </TextView>
+
+                        <ToggleButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="120dp"
+                            android:layout_weight="0"
+                            android:textOff="No"
+                            android:textOn="Yes"
+                            android:textSize="10sp">
+                        </ToggleButton>
+                    </LinearLayout>
+
+                    <!-- Type_Hamburger -->
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type_hamburger_editText">
+                    </TextView>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/type_hamburger">
+                    </Spinner>
+
+                    <!-- Extras -->
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/extras_editText">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cheese">
+                        </CheckBox>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sauces">
+                        </CheckBox>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Meat">
+                        </CheckBox>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bacon">
+                        </CheckBox>
+                    </LinearLayout>
+
+                    <!-- Drinks -->
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type_drink_editText">
+                    </TextView>
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Water">
+                        </RadioButton>
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Coke">
+                        </RadioButton>
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Soda">
+                        </RadioButton>
+                    </RadioGroup>
+
+                    <!-- Type_Chips -->
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type_chips_editText">
+                    </TextView>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/type_chips">
+                    </Spinner>
+
+                    <!-- Form Type -->
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Switch      ">
+                    </Switch>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!-- Button Submit Order -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_textEdit"
+            android:layout_weight="1"
+            >
+        </Button>
+    </LinearLayout>
+
+    <!--
+    <Button
+        android:id="@+id/Jugar"
+        android:layout_width="407dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:onClick="play"
+        android:text="RESTART GAME"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+
+        <ImageView
+            android:id="@+id/a1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            android:contentDescription=""
+            app:srcCompat="@drawable/celda" />
+
+        <ImageView
+            android:id="@+id/a2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+
+        <ImageView
+            android:id="@+id/a3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+        <ImageView
+            android:id="@+id/b1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+        <ImageView
+            android:id="@+id/b2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+        <ImageView
+            android:id="@+id/b3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+        <ImageView
+            android:id="@+id/c1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+        <ImageView
+            android:id="@+id/c2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+        <ImageView
+            android:id="@+id/c3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="#007C7373"
+            android:onClick="click"
+            android:padding="4dp"
+            app:srcCompat="@drawable/celda" />
+
+    </GridLayout> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+    RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -181,5 +503,6 @@
 
         </GridLayout>
     </RelativeLayout>
+    -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

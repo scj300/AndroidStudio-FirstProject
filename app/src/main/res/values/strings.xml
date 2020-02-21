@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">First Example</string>
+    <string name="name_hint">Your name:</string>
+    <string name="phone_number_hint">Your Phone Number:</string>
+    <string name="home_delivery_textView">¿Do you want home delivery?</string>
+    <string name="extras_editText">Select your extras!!</string>
+    <string name="type_hamburger_editText">Select your Hamburger:</string>
+    <string-array name="type_hamburger">
+        <item>Meat</item>
+        <item>Cheese</item>
+        <item>Double Cheese</item>
+        <item>Pickles</item>
+        <item>Bacon and Cheese</item>
+        <item>All in :O</item>
+    </string-array>
+    <string name="type_drink_editText">Select your Drink:</string>
+    <string name="type_chips_editText">Select your Chips:</string>
+    <string-array name="type_chips">
+        <item>Normal</item>
+        <item>Deluxe</item>
+        <item>Slim</item>
+        <item>Fat</item>
+    </string-array>
+    <string name="button_textEdit">Submit Order</string>
+
 </resources>

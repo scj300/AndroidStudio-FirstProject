@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="50dp"
-        android:text="@message"
+        android:text="message"
         ></TextView>
 
     <Button

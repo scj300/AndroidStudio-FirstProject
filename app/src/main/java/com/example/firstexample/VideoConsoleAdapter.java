@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,9 +35,11 @@ public class VideoConsoleAdapter extends ArrayAdapter<VideoConsole> {
 
         TextView consoleCompany = convertView.findViewById(R.id.videoConsoleCompany);
         TextView consoleName = convertView.findViewById(R.id.videoConsoleName);
+        ImageView consoleImage = convertView.findViewById(R.id.consoleImage);
 
         consoleCompany.setText(console.getCompany());
         consoleName.setText(console.getConsoleName());
+        consoleImage.setImageResource(console.getImageResourceId());
 
         return convertView;
     } // end getView(...)

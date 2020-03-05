@@ -13,6 +13,14 @@ public class VideoConsole {
         this.imageResourceId = imageResourceId;
     } // end constructor
 
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setCompany(String company){
+        this.company = company;
+    }
+
     public String getCompany() {
         return this.company;
     }

@@ -22,24 +22,19 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Switch my_switch;
-   // private int[] CELDAS;
-   // private int[] CELDAS_CLICKED;
-   // public int contador = 0;
-
-    protected boolean endGame = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        androidx.appcompat.widget.Toolbar tool = findViewById(R.id.toolbar);
+        setSupportActionBar(tool);
 
         // List of consoles
         ArrayList<VideoConsole> consoleList = new ArrayList<VideoConsole>();
 
         // PS4 and Xbox X
-        VideoConsole ps4 = new VideoConsole("Sonny", "Play Station 4", R.drawable.ps4);
+        VideoConsole ps4 = new VideoConsole("Sonny", "Play Station 4", R.drawable.graduate);
         VideoConsole xbox = new VideoConsole("Microsoft", "Xbox One X", R.drawable.xbox);
 
         // Adding consoles to the consoleList
